@@ -39,7 +39,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
                 </div>
                 <div className='flex-1 mt-5'>
                     <p className='text-lg font-bold'>{post.title}</p>
-                    <p className='text-gray-500 line-clamp-2'>{post.metaDesc}</p>
+                    <p className='text-gray-500 line-clamp-2'>{post.description}</p>
                 </div>
                 <p className='flex items-center mt-5 font-bold group-hover:underline'>
                     Read Post

@@ -2,6 +2,7 @@ import BlogList from '@/components/BlogList';
 import { client } from '@/lib/sanity.client';
 import { groq } from 'next-sanity'
 
+export const revalidate = 60;
 
 // const query = groq`
 //   *[_type == 'post'] {

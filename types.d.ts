@@ -13,7 +13,14 @@ interface Post extends Base {
   mainImage: Image;
   slug: Slug;
   title: string;
-  metaDesc: string;
+  description: string; 
+}
+
+interface Author extends Base {
+  bio: Block[];
+  image: Image;
+  name: string;
+  slug: Slug;
 }
 
 interface Image {
