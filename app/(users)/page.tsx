@@ -1,9 +1,25 @@
-import Image from 'next/image'
+import BlogList from '@/components/BlogList';
+import { client } from '@/lib/sanity.client';
+import { groq } from 'next-sanity'
 
-export default function Home() {
+
+// const query = groq`
+//   *[_type == 'post'] {
+//     ...,
+//     author ->,
+//     categories[] ->
+//   } | order(_createdAt desc)
+// `;
+
+export default async function Home() {
+
+  const posts = await client.fetch(`*[_type == 'post'] {
+    ...,
+    author ->,
+    categories[] ->
+  } | order(_createdAt desc)`)
+
   return (
-    <div>
-      Welcome to TechTribe
-    </div>
+    <BlogList posts={posts} />
   )
 }

@@ -20,6 +20,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'metaDesc',
+      title: 'Meta Description',
+      type: 'string',
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
